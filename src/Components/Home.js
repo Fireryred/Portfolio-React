@@ -1,6 +1,7 @@
 import logo from "../logo.svg";
 import "../App.css";
 import HeaderNav from "./Template/HeaderNav";
+import FooterNav from "./Template/FooterNav";
 
 function Home() {
   return (
@@ -22,6 +23,7 @@ function Home() {
           </a>
         </header>
       </div>
+      <FooterNav />
     </>
   );
 }
