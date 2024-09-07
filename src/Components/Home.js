@@ -1,28 +1,15 @@
-import logo from "../logo.svg";
-import "../App.css";
 import HeaderNav from "./Template/HeaderNav";
 import FooterNav from "./Template/FooterNav";
+import Container from "react-bootstrap/Container";
 
 function Home() {
   return (
     <>
       <HeaderNav />
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Container data-bs-theme="dark">
+        <h1>Hey, I'm Gershom</h1>
+        <h4>I'm a Software Engineer</h4>
+      </Container>
       <FooterNav />
     </>
   );
