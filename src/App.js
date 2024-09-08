@@ -1,8 +1,8 @@
-import Home from "./Components/Home";
+import Index from "./Components";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  return <Home />;
+  return <Index />;
 }
 
 export default App;
