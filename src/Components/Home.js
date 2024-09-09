@@ -6,11 +6,13 @@ import Row from "react-bootstrap/Row";
 function Home() {
   return (
     <>
-      <Container data-bs-theme="dark" fluid="sm">
-        <Row xs={5}>
+      <Container fluid="sm" className="min-vh-100 align-middle">
+        <Row xs={5} className="min-vh-100 p-5">
           <Col />
           <Col xs={5}>
-            <h1>Hey, I'm Gershom</h1>
+            <h1>
+              <b>Hey, I'm Gershom.</b>
+            </h1>
             <h4>I'm a Software Engineer</h4>
             <p>
               I build programs for fun and recently have been dipping my toes on
