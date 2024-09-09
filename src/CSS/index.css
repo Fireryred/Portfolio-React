@@ -1,4 +1,11 @@
-.bg-color {
+html {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 50px;
+}
+section {
+  scroll-snap-align: start;
+}
+.main-body {
   background-color: #282c34;
   color: ivory;
 }

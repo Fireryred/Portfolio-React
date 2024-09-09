@@ -1,14 +1,12 @@
-import HeaderNav from "./Template/HeaderNav";
-import FooterNav from "./Template/FooterNav";
+import NavigationBar from "./Template/NavigationBar";
 import Home from "./Home";
 import "../CSS/index.css";
 
 function Index() {
   return (
-    <div className="bg-color">
-      <HeaderNav />
+    <div className="main-body">
+      <NavigationBar />
       <Home />
-      <FooterNav />
     </div>
   );
 }
