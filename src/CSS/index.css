@@ -1,10 +1,67 @@
-html {
+/* html {
   scroll-snap-type: y mandatory;
   scroll-padding-top: 50px;
 }
 section {
   scroll-snap-align: start;
-}
+} */
 .main-body {
   background-color: #282c34;
+}
+.home-container {
+  padding-top: 8rem;
+  padding-left: 5.9rem !important;
+}
+.home-title {
+  font-size: 4.6rem;
+  line-height: 1.1;
+  margin-top: 1.6rem;
+  font-weight: 900;
+}
+
+.home-subtitle {
+  font-size: 2.6rem;
+  line-height: 1.1;
+  font-weight: 200;
+}
+.home-content {
+  max-width: 700px;
+  font-weight: 200;
+}
+span {
+  font-weight: 800;
+}
+.about-container {
+  padding-top: 7rem;
+  padding-left: 5.9rem !important;
+}
+.about-title {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  font-size: 3.6rem;
+  font-weight: 900;
+}
+.about-title-line {
+  padding-left: 1rem;
+  width: 100%;
+  height: 1px;
+  background: #ebecf3;
+  opacity: 0.3;
+}
+.about-skill {
+  font-size: 1rem !important;
+  color: #ced4da !important;
+}
+.about-content {
+  text-align: justify;
+}
+.about-content > p:first-child::first-letter {
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  margin-right: 0.3rem;
+  background-color: #212529;
+  font-weight: 700;
+  float: left;
+  font-size: 1rem;
 }
