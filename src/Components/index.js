@@ -2,6 +2,7 @@ import NavigationBar from "./Template/NavigationBar";
 import About from "./About";
 import Home from "./Home";
 import "../CSS/index.css";
+import Projects from "./Project-Page/Projects";
 
 function Index() {
   return (
@@ -9,6 +10,7 @@ function Index() {
       <NavigationBar />
       <Home />
       <About />
+      <Projects/>
     </div>
   );
 }

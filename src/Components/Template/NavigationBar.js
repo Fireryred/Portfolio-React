@@ -28,7 +28,7 @@ function NavigationBar() {
               <Nav.Link href="#about">About</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="">Projects</Nav.Link>
+              <Nav.Link href="#project">Projects</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="">Contact</Nav.Link>
