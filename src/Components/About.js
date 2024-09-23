@@ -5,33 +5,33 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const TECHSKILL = [
-  { id: 0, skill: "Java" },
-  { id: 1, skill: "SQL" },
-  { id: 2, skill: "NoSQL" },
-  { id: 3, skill: "Godot 4" },
-  { id: 4, skill: "React.js" },
-  { id: 5, skill: "React Native" },
-  { id: 6, skill: "OOP" },
-  { id: 7, skill: "RDBMS" },
-  { id: 8, skill: "Troubleshooting" },
+  { id: "tech-0", skill: "Java" },
+  { id: "tech-1", skill: "SQL" },
+  { id: "tech-2", skill: "NoSQL" },
+  { id: "tech-3", skill: "Godot 4" },
+  { id: "tech-4", skill: "React.js" },
+  { id: "tech-5", skill: "React Native" },
+  { id: "tech-6", skill: "OOP" },
+  { id: "tech-7", skill: "RDBMS" },
+  { id: "tech-8", skill: "Troubleshooting" },
 ];
 const SOFTSKILL = [
-  { id: 0, skill: "Critical Thinking" },
-  { id: 1, skill: "Adaptability" },
-  { id: 2, skill: "Self-Reliant" },
-  { id: 3, skill: "Self-Motivation" },
-  { id: 4, skill: "Attention to details" },
-  { id: 5, skill: "Cooperative" },
+  { id: "soft-0", skill: "Critical Thinking" },
+  { id: "soft-1", skill: "Adaptability" },
+  { id: "soft-2", skill: "Self-Reliant" },
+  { id: "soft-3", skill: "Self-Motivation" },
+  { id: "soft-4", skill: "Attention to details" },
+  { id: "soft-5", skill: "Cooperative" },
 ];
 
 function About() {
   const techSkillList = TECHSKILL.map((skill) => (
-    <Badge pill bg="dark" className="my-1 me-1 about-skill" id={skill.id}>
+    <Badge pill bg="dark" className="my-1 me-1 about-skill" key={skill.id}>
       {skill.skill}
     </Badge>
   ));
   const softSkillList = SOFTSKILL.map((skill) => (
-    <Badge pill bg="dark" className="my-1 me-1 about-skill" id={skill.id}>
+    <Badge pill bg="dark" className="my-1 me-1 about-skill" key={skill.id}>
       {skill.skill}
     </Badge>
   ));
@@ -41,9 +41,9 @@ function About() {
       <Row xs={5}>
         <Col />
         <Col xs={7} className="px-5">
-          <div className="about-title mb-3">
+          <div className="heading-title mb-3">
             <div>
-              About<span className="text-success">.</span>
+              About<span className="text-green">.</span>
             </div>
             <div className="line" />
           </div>

@@ -11,16 +11,16 @@ function Home() {
         <Col />
         <Col xs={6} className="ps-5">
           <p className="home-title">
-            Hey, I'm Gershom<span className="text-success">.</span>
+            Hey, I'm Gershom<span className="text-green">.</span>
           </p>
           <p className="home-subtitle">
-            I'm a <span className="text-success">Software Engineer</span>
+            I'm a <span className="text-green">Software Engineer</span>
           </p>
         </Col>
       </Row>
       <Row xs={5}>
         <Col />
-        <Col xs={4} className="ps-5">
+        <Col xs={6} className="ps-5">
           <p className="home-content fs-5">
             I build programs for fun and recently have been dipping my toes on
             Godot 4. I still am working on my skills as a software developer.
