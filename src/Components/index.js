@@ -7,12 +7,11 @@ import Projects from "./Projects";
 
 function Index() {
   const observerRefs = useRef([]);
+
   const setReference = (div, key) => {
     observerRefs.current[key] = div;
   };
-  useEffect(() => {
-    console.log(observerRefs);
-  });
+
   return (
     <div className="text-light main-body">
       <NavigationBar refs={observerRefs} />
