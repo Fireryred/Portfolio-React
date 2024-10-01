@@ -12,12 +12,25 @@ import twitter from "../Images/SVG/twitter.svg";
 import linkedin from "../Images/SVG/linkedin.svg";
 import resume from "../PDF/Gershom_Gruta_Resume.pdf";
 
-import "../CSS/footer.css";
+import "../CSS/nav.css";
 
 function NavigationBar(props) {
+  const active = document?.getElementsByClassName("active")[0];
+  const items = ["Home", "About", "Project", "Contact"];
   const observerRefs = props.refs;
   const [visibleKey, setVisibleKey] = useState(0);
   const observers = useRef([]);
+
+  const item = items.map((item, key) => (
+    <Nav.Item>
+      <a
+        className={`${key === visibleKey ? "active" : ""}`}
+        href={`#${item.toLowerCase()}`}
+      >
+        {item}
+      </a>
+    </Nav.Item>
+  ));
 
   const observerCallback = async (e, key) => {
     if (e.length && e[0].isIntersecting) {
@@ -49,35 +62,7 @@ function NavigationBar(props) {
             defaultActiveKey="./"
             className="justify-content-left"
           >
-            <Nav.Item>
-              <Nav.Link
-                className={0 === visibleKey ? "active" : ""}
-                href="#home"
-              >
-                Home
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link
-                className={1 === visibleKey ? "active" : ""}
-                href="#about"
-              >
-                About
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link
-                className={2 === visibleKey ? "active" : ""}
-                href="#project"
-              >
-                Projects
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link className={3 === visibleKey ? "active" : ""} href="">
-                Contact
-              </Nav.Link>
-            </Nav.Item>
+            {item}
           </Nav>
           <Nav className="justify-content-right">
             <Button variant="outline-success" target="_blank" href={resume}>
