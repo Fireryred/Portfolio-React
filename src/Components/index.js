@@ -1,16 +1,24 @@
-import NavigationBar from "./Template/NavigationBar";
+import { useEffect, useRef } from "react";
+import NavigationBar from "./NavigationBar";
 import About from "./About";
 import Home from "./Home";
 import "../CSS/index.css";
-import Projects from "./Project-Page/Projects";
+import Projects from "./Projects";
 
 function Index() {
+  const observerRefs = useRef([]);
+  const setReference = (div, key) => {
+    observerRefs.current[key] = div;
+  };
+  useEffect(() => {
+    console.log(observerRefs);
+  });
   return (
     <div className="text-light main-body">
-      <NavigationBar />
-      <Home />
-      <About />
-      <Projects/>
+      <NavigationBar refs={observerRefs} />
+      <Home handleRef={setReference} />
+      <About handleRef={setReference} />
+      <Projects handleRef={setReference} />
     </div>
   );
 }

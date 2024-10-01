@@ -7,29 +7,51 @@ html {
 section {
   scroll-snap-align: start;
 } */
+:root {
+  --text-xs: 1rem;
+  --text-sm: 1.25rem;
+  --text-md: 1.5rem;
+  --text-lg: 2.6rem;
+  --text-xl: 3.4rem;
+  --text-2xl: 4.6rem;
+}
+.ref {
+  position: absolute;
+  width: 1px;
+  margin-top: 40vh;
+}
 .main-body {
   background-color: #282c34;
 }
 .text-green {
   color: #15a347 !important;
 }
+.main-body > div:last-child {
+  padding-bottom: 10rem;
+}
+.filter-green {
+  filter: invert(43%) sepia(98%) saturate(423%) hue-rotate(89deg)
+    brightness(95%) contrast(88%);
+}
 .home-container {
   padding-top: 8rem;
   padding-left: 5.9rem !important;
+  min-height: 40rem;
 }
 .home-title {
-  font-size: 4.6rem;
+  font-size: var(--text-2xl);
   line-height: 1.1;
   margin-top: 1.6rem;
   font-weight: 900;
 }
 
 .home-subtitle {
-  font-size: 2.6rem;
+  font-size: var(--text-lg);
   line-height: 1.1;
   font-weight: 200;
 }
 .home-content {
+  font-size: var(--text-sm);
   max-width: 700px;
   font-weight: 200;
 }
@@ -39,12 +61,13 @@ span {
 .sub-container {
   padding-top: 7rem;
   padding-left: 5.9rem !important;
+  min-height: 45rem;
 }
 .heading-title {
   display: flex;
   align-items: center;
-  gap: 2.4rem;
-  font-size: 3.6rem;
+  gap: 1.6rem;
+  font-size: var(--text-xl);
   font-weight: 900;
 }
 .line {
@@ -54,13 +77,18 @@ span {
   background: #ebecf3;
   opacity: 0.3;
 }
+.about-skill-title {
+  font-size: var(--text-md);
+  font-weight: 700;
+}
 .about-skill {
-  font-size: 1rem !important;
+  font-size: var(--text-xs) !important;
   color: #ced4da !important;
 }
 .about-content {
   text-align: justify;
   font-weight: 200;
+  font-size: var(--text-sm);
 }
 .about-content > p:first-child::first-letter {
   border-radius: 0.4rem;
@@ -69,17 +97,24 @@ span {
   background-color: #212529;
   font-weight: 700;
   float: left;
-  font-size: 1.5rem;
+  font-size: var(--text-md);
+}
+.project-row {
+  margin-top: 1rem !important;
 }
 .project-card {
   width: 29% !important;
 }
 .project-card > .card {
+  height: 17rem;
   border-radius: 0.8rem;
   overflow: hidden;
+  cursor: pointer;
 }
 .project-card-img {
   width: 85% !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
   margin-inline: auto;
   margin-top: 3.5rem;
   margin-bottom: -3.5rem;
@@ -87,7 +122,22 @@ span {
 .project-title {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  font-size: var(--text-md);
+  gap: 0.6rem;
+}
+.project-title > div {
+  display: flex;
+  gap: 0.6rem;
+}
+.project-title > div > .btn {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+.project-title > div > .btn > img {
+  margin: auto;
+  width: var(--text-md);
+  vertical-align: baseline !important;
 }
 .project-title > div:first-child {
   font-weight: 700;
@@ -96,7 +146,7 @@ span {
   margin-block: 1.6rem;
 }
 .project-container > div:not(:first-child) {
-  font-size: 1.05rem;
+  font-size: var(--text-xs);
 }
 .project-language {
   font-weight: 600;
@@ -104,4 +154,68 @@ span {
 }
 .project-content {
   font-weight: 200;
+  text-align: justify;
+}
+.project-more {
+  font-weight: 600;
+}
+.project-more:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.modal-project {
+  max-width: 35% !important;
+  margin-block: 3.5rem !important;
+}
+.modal-header {
+  overflow: hidden;
+}
+.modal-body {
+  padding: 1.2rem !important;
+  gap: 1.2rem;
+}
+.modal-project-title {
+  font-weight: bold;
+  font-size: var(--text-lg);
+  margin: 0;
+}
+.modal-project-language {
+  font-size: var(--text-xs);
+  margin-top: 0.2rem;
+  margin-bottom: 1.2rem;
+}
+.modal-project-description {
+  text-align: justify;
+}
+.modal-project-footer {
+  margin-top: 2.4rem;
+}
+.modal-project-footer > p:first-child {
+  font-size: var(--text-md);
+  font-weight: 700;
+}
+.modal-project-footer > div:last-child {
+  display: flex;
+  gap: 1.2rem;
+}
+.modal-link {
+  display: flex !important;
+  gap: 0.4rem;
+  text-decoration: none !important;
+}
+.modal-link > img {
+  margin: auto;
+  width: var(--text-xs);
+}
+.modal-link {
+  padding: 0% !important;
+}
+.modal-link.disabled {
+  text-decoration: line-through;
+}
+.modal-link-space {
+  text-decoration: none !important;
+}
+.modal-link:hover {
+  text-decoration: underline !important;
 }

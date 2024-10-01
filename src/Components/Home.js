@@ -3,10 +3,17 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-function Home() {
+function Home(props) {
   return (
     // <section>
-    <Container fluid className="min-vh-100 home-container">
+    <Container fluid className="home-container" id="home">
+      <div className="ref">
+        <div
+          ref={(div) => {
+            props.handleRef(div, 0);
+          }}
+        />
+      </div>
       <Row xs={5}>
         <Col />
         <Col xs={6} className="ps-5">
@@ -20,8 +27,8 @@ function Home() {
       </Row>
       <Row xs={5}>
         <Col />
-        <Col xs={6} className="ps-5">
-          <p className="home-content fs-5">
+        <Col xs={4} className="ps-5">
+          <p className="home-content">
             I build programs for fun and recently have been dipping my toes on
             Godot 4. I still am working on my skills as a software developer.
             Let's connect

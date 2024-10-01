@@ -24,7 +24,7 @@ const SOFTSKILL = [
   { id: "soft-5", skill: "Cooperative" },
 ];
 
-function About() {
+function About(props) {
   const techSkillList = TECHSKILL.map((skill) => (
     <Badge pill bg="dark" className="my-1 me-1 about-skill" key={skill.id}>
       {skill.skill}
@@ -37,7 +37,14 @@ function About() {
   ));
   return (
     // <section>
-    <Container fluid className="min-vh-100 sub-container" id="about">
+    <Container fluid className="sub-container" id="about">
+      <div className="ref">
+        <div
+          ref={(div) => {
+            props.handleRef(div, 1);
+          }}
+        />
+      </div>
       <Row xs={5}>
         <Col />
         <Col xs={7} className="px-5">
@@ -51,7 +58,7 @@ function About() {
       </Row>
       <Row xs={5}>
         <Col />
-        <Col xs={5} className="ps-5 about-content fs-5">
+        <Col xs={5} className="ps-5 about-content">
           <p>
             Hello! I'm Gershom, I'm a graduate as a Software Engineer at
             iAcademy. I specialize in backend, primarily Java, but love building
@@ -76,9 +83,9 @@ function About() {
           <Button variant="success">Contact me</Button>
         </Col>
         <Col>
-          <p className="fs-4">Tech Skills</p>
+          <p className="about-skill-title">Tech Skills</p>
           {techSkillList}
-          <p className="fs-4 pt-5">Soft Skills</p>
+          <p className="about-skill-title pt-5">Soft Skills</p>
           {softSkillList}
         </Col>
       </Row>
