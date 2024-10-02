@@ -36,8 +36,13 @@ function ProjectCard(props) {
     let galleryLink = projectProp.links.gallery;
 
     let projectProp1 = props.projects[index + 1];
-    let sourceCodeLink1 = projectProp1.links.source_code;
-    let galleryLink1 = projectProp1.links.gallery;
+    let sourceCodeLink1 = "";
+    let galleryLink1 = "";
+    if (!isObjectEmpty(projectProp1)) {
+      sourceCodeLink1 = projectProp1.links.source_code;
+      galleryLink1 = projectProp1.links.gallery;
+    }
+
     projects.push(
       <Row xs={5} data-bs-theme="dark" className="project-row">
         <Col />
@@ -85,49 +90,57 @@ function ProjectCard(props) {
           </div>
         </Col>
 
-        <Col className="ps-3 pe-5 project-card">
-          <Card onClick={() => handleShowProject(projectProp1)}>
-            <Card.Img className="project-card-img" src={projectProp1.image} />
-          </Card>
-          <div className="project-container ">
-            <div className="project-title">
-              <div>{projectProp1.name}</div>
-              <div className="line" />
-              <div>
-                {sourceCodeLink1 === "" ? (
-                  <Button variant="link" className="disabled">
-                    <img src={github} alt="" />
-                  </Button>
-                ) : (
-                  <Button variant="link" target="_blank" href={sourceCodeLink1}>
-                    <img src={github} alt="" />
-                  </Button>
-                )}
-                {galleryLink1 === "" ? (
-                  <Button variant="link" className="disabled">
-                    <img src={image} alt="" />
-                  </Button>
-                ) : (
-                  <Button variant="link" target="_blank" href={galleryLink1}>
-                    <img src={image} alt="" />
-                  </Button>
-                )}
+        {!isObjectEmpty(projectProp1) ? (
+          <Col className="ps-3 pe-5 project-card">
+            <Card onClick={() => handleShowProject(projectProp1)}>
+              <Card.Img className="project-card-img" src={projectProp1.image} />
+            </Card>
+            <div className="project-container ">
+              <div className="project-title">
+                <div>{projectProp1.name}</div>
+                <div className="line" />
+                <div>
+                  {sourceCodeLink1 === "" ? (
+                    <Button variant="link" className="disabled">
+                      <img src={github} alt="" />
+                    </Button>
+                  ) : (
+                    <Button
+                      variant="link"
+                      target="_blank"
+                      href={sourceCodeLink1}
+                    >
+                      <img src={github} alt="" />
+                    </Button>
+                  )}
+                  {galleryLink1 === "" ? (
+                    <Button variant="link" className="disabled">
+                      <img src={image} alt="" />
+                    </Button>
+                  ) : (
+                    <Button variant="link" target="_blank" href={galleryLink1}>
+                      <img src={image} alt="" />
+                    </Button>
+                  )}
+                </div>
+              </div>
+              <div className="text-green project-language">
+                {projectProp1.language}
+              </div>
+              <div className="project-content">
+                {projectProp1.description}
+                <span
+                  onClick={() => handleShowProject(projectProp1)}
+                  className="text-green project-more"
+                >
+                  Learn More &gt;
+                </span>
               </div>
             </div>
-            <div className="text-green project-language">
-              {projectProp1.language}
-            </div>
-            <div className="project-content">
-              {projectProp1.description}
-              <span
-                onClick={() => handleShowProject(projectProp1)}
-                className="text-green project-more"
-              >
-                Learn More &gt;
-              </span>
-            </div>
-          </div>
-        </Col>
+          </Col>
+        ) : (
+          ""
+        )}
       </Row>
     );
   }
