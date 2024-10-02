@@ -33,7 +33,9 @@ function Home(props) {
             Godot 4. I still am working on my skills as a software developer.
             Let's connect
           </p>
-          <Button variant="success">Contact me </Button>
+          <Button variant="success" href="#contact">
+            Contact me
+          </Button>
         </Col>
       </Row>
     </Container>

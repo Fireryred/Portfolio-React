@@ -4,6 +4,7 @@ import About from "./About";
 import Home from "./Home";
 import "../CSS/index.css";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
 function Index() {
   const observerRefs = useRef([]);
@@ -18,6 +19,7 @@ function Index() {
       <Home handleRef={setReference} />
       <About handleRef={setReference} />
       <Projects handleRef={setReference} />
+      <Contact handleRef={setReference} />
     </div>
   );
 }
