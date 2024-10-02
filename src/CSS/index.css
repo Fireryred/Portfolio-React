@@ -179,6 +179,9 @@ span {
   font-size: var(--text-lg);
   margin: 0;
 }
+.modal-project-logo {
+  width: var(--text-lg);
+}
 .modal-project-language {
   font-size: var(--text-xs);
   margin-top: 0.2rem;

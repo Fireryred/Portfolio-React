@@ -7,7 +7,6 @@ import BantayBayanImage from "../Images/Projects/BantayBayan.jpg";
 import RealifsImage from "../Images/Projects/Realifs.jpg";
 import SolobitImage from "../Images/Projects/SoloBit.png";
 import MyxaImage from "../Images/Projects/Myxa.png";
-import RealifsLogo from "../Images/Projects/Realifs BG.svg";
 
 const projects = {
   0: {
@@ -17,7 +16,6 @@ const projects = {
       gallery: "https://fireryred.github.io/Portfolio/Pages/work/realifs.html",
     },
     image: RealifsImage,
-    logo: RealifsLogo,
     language: "React-Native - Firestore - Mongodb - DirectionAPI",
     description:
       "Think of Grab/Uber but instead of food, you are delivering donation, " +
@@ -25,6 +23,7 @@ const projects = {
     full_description: [
       `REALIFS short for 'Real-time Integrated Fetching System', is a donation platform that asist Civil Society Organizations (CSO) and donor by providing real-time donation fetching and delivery`,
       `The mobile application will provide a donation platform that will store, organize and manage data of accounts and donation efforts. This includes a real-time communication and socket functionalities that handles GPS route navigaiton, donation tracking, chat features and a payment gateway for fetching fees`,
+      `The reason why we chose to create this is because it was pandemic and we saw the popularity of delivery apps, we thought about how donors can't donate due to them stuck at their houses. `,
       `The main task I did in this capstone project is to develop the mobile application and QA the HR's website, we decided to use React-Native as we are interested in learning it and bootstrap for the UI. MapsAPI and DirectionAPI from google was used to track the fetchers during delivery, and CSO's donation effort. Firebase was used along side Mongodb, Firebase for your data management, and Mongodb for banking purposes. `,
     ],
   },
@@ -35,7 +34,6 @@ const projects = {
       gallery: "https://fireryred.github.io/Portfolio/Pages/work/solobit.html",
     },
     image: SolobitImage,
-    logo: "",
     language: "PHP - Java - MySQL - Bootstrap",
     description:
       "An e-commerce webisite as a solo project with the goal of me getting " +
@@ -50,7 +48,6 @@ const projects = {
       gallery: "https://fireryred.github.io/Portfolio/Pages/work/myxa.html",
     },
     image: MyxaImage,
-    logo: "",
     language: "Java - Firestore - MapsAPI - DirectionAPI",
     description:
       "Meal kit delivery service, like blue apron, is accesible through you " +
@@ -65,7 +62,6 @@ const projects = {
         "https://fireryred.github.io/Portfolio/Pages/work/bantaybayan.html",
     },
     image: BantayBayanImage,
-    logo: "",
     language: "Java JSP - MYSql - Bootstrap4 - MailAPI",
     description:
       "A Management Information System, it connects civilians and village official digitally, aiding in submitting and receiving issues within the community. ",
