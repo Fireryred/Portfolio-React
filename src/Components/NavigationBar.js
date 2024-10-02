@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Navbar from "react-bootstrap/Navbar";
-import Image from "react-bootstrap/Image";
 import Nav from "react-bootstrap/Nav";
 
 import github from "../Images/SVG/github.svg";
@@ -24,6 +23,7 @@ function NavigationBar(props) {
     <Nav.Item>
       <a
         className={`${key === visibleKey ? "active" : ""}`}
+        activeKey="./"
         href={`#${item.toLowerCase()}`}
       >
         {item}
@@ -56,16 +56,12 @@ function NavigationBar(props) {
     <>
       <Navbar expand="lg" bg="dark" data-bs-theme="dark" sticky="top">
         <Container>
-          <Nav
-            variant="underline"
-            defaultActiveKey="./"
-            className="justify-content-left"
-          >
+          <Nav variant="underline" className="justify-content-left">
             {item}
           </Nav>
           <Nav className="justify-content-right">
             <Button variant="outline-success" target="_blank" href={resume}>
-              Resume
+              My Resume
             </Button>
           </Nav>
         </Container>
@@ -73,17 +69,20 @@ function NavigationBar(props) {
       <Navbar expand="lg" fixed="bottom" bg="dark" data-bs-theme="dark">
         <Container className="justify-content-center">
           <Nav>
-            <Nav.Link href="./">
-              <Image src={github} className="footer-svg" />
+            <Nav.Link target="_blank" href="https://github.com/Fireryred">
+              <img src={github} alt="" className="footer-svg" />
             </Nav.Link>
-            <Nav.Link href="./">
-              <Image src={facebook} className="footer-svg" />
+            <Nav.Link
+              target="_blank"
+              href="https://www.linkedin.com/in/gershom-gruta/"
+            >
+              <img src={linkedin} alt="" className="footer-svg" />
             </Nav.Link>
-            <Nav.Link href="./">
-              <Image src={twitter} className="footer-svg" />
+            <Nav.Link target="_blank" href="https://www.facebook.com/Abbyssof/">
+              <img src={facebook} alt="" className="footer-svg" />
             </Nav.Link>
-            <Nav.Link href="./">
-              <Image src={linkedin} className="footer-svg" />
+            <Nav.Link target="_blank" href="https://x.com/GershomGruta">
+              <img src={twitter} alt="" className="footer-svg" />
             </Nav.Link>
           </Nav>
         </Container>
