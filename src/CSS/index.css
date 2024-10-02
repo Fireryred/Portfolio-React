@@ -14,6 +14,10 @@ section {
   --text-lg: 2.6rem;
   --text-xl: 3.4rem;
   --text-2xl: 4.6rem;
+  --text-3xl: 6.6rem;
+  --text-green: #15a347;
+  --filter-green: invert(43%) sepia(98%) saturate(423%) hue-rotate(89deg)
+    brightness(95%) contrast(88%);
 }
 .ref {
   position: absolute;
@@ -24,14 +28,13 @@ section {
   background-color: #282c34;
 }
 .text-green {
-  color: #15a347 !important;
+  color: var(--text-green) !important;
 }
 .main-body > div:last-child {
   padding-bottom: 10rem;
 }
 .filter-green {
-  filter: invert(43%) sepia(98%) saturate(423%) hue-rotate(89deg)
-    brightness(95%) contrast(88%);
+  filter: var(--filter-green);
 }
 .home-container {
   padding-top: 8rem;
@@ -44,20 +47,23 @@ section {
   margin-top: 1.6rem;
   font-weight: 900;
 }
-
+.home-title > span {
+  font-weight: 800;
+}
 .home-subtitle {
   font-size: var(--text-lg);
   line-height: 1.1;
   font-weight: 200;
+}
+.home-subtitle > span {
+  font-weight: 800;
 }
 .home-content {
   font-size: var(--text-sm);
   max-width: 700px;
   font-weight: 200;
 }
-span {
-  font-weight: 800;
-}
+
 .sub-container {
   padding-top: 7rem;
   padding-left: 5.9rem !important;
@@ -98,6 +104,26 @@ span {
   font-weight: 700;
   float: left;
   font-size: var(--text-md);
+}
+.about-footer {
+  font-weight: 500;
+  display: flex;
+  gap: 1rem;
+}
+.about-link-arrow {
+  width: 1.6rem;
+  filter: var(--filter-green);
+  margin-bottom: 0.1rem;
+}
+.about-link {
+  opacity: 75%;
+  margin-bottom: 0.025rem;
+  width: var(--text-sm);
+}
+.about-link:hover {
+  opacity: 100%;
+  filter: var(--filter-green);
+  cursor: pointer;
 }
 .project-row {
   margin-top: 1rem !important;
@@ -221,4 +247,46 @@ span {
 }
 .modal-link:hover {
   text-decoration: underline !important;
+}
+.contact {
+  align-items: center;
+  text-align: center;
+}
+.contact-title {
+  font-size: var(--text-3xl);
+  font-weight: 900;
+  line-height: 1;
+}
+.contact-content {
+  font-size: var(--text-sm);
+  font-weight: 200;
+}
+.contact-content > .text-green {
+  font-weight: 400;
+  text-decoration: none !important;
+}
+.contact-content > .text-green:hover {
+  cursor: pointer;
+  text-decoration: underline !important;
+}
+.contact-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-email {
+  display: flex;
+  font-size: var(--text-md);
+  gap: 0.3rem;
+  width: fit-content;
+  text-decoration: none !important;
+}
+.contact-email:hover {
+  color: var(--text-green);
+  filter: var(--filter-green);
+  cursor: pointer;
+}
+.contact-email > img {
+  margin-top: 0.5rem;
+  width: 2rem;
 }

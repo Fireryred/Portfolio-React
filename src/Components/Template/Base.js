@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-function Base() {
+function Base(props) {
   return (
     <section>
       <Container fluid className="sub-container">
