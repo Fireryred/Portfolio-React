@@ -15,7 +15,6 @@ import resume from "../PDF/Gershom_Gruta_Resume.pdf";
 import "../CSS/nav.css";
 
 function NavigationBar(props) {
-  const active = document?.getElementsByClassName("active")[0];
   const items = ["Home", "About", "Project", "Contact"];
   const observerRefs = props.refs;
   const [visibleKey, setVisibleKey] = useState(0);

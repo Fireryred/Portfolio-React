@@ -52,20 +52,20 @@ function ProjectCard(props) {
               <div>
                 {sourceCodeLink === "" ? (
                   <Button variant="link" className="disabled">
-                    <img src={github} />
+                    <img src={github} alt="" />
                   </Button>
                 ) : (
                   <Button variant="link" target="_blank" href={sourceCodeLink}>
-                    <img src={github} />
+                    <img src={github} alt="" />
                   </Button>
                 )}
                 {galleryLink === "" ? (
                   <Button variant="link" className="disabled">
-                    <img src={image} />
+                    <img src={image} alt="" />
                   </Button>
                 ) : (
                   <Button variant="link" target="_blank" href={galleryLink}>
-                    <img src={image} />
+                    <img src={image} alt="" />
                   </Button>
                 )}
               </div>
@@ -79,7 +79,7 @@ function ProjectCard(props) {
                 onClick={() => handleShowProject(projectProp)}
                 className="text-green project-more"
               >
-                &nbsp;Learn More &gt;
+                Learn More &gt;
               </span>
             </div>
           </div>
@@ -96,20 +96,20 @@ function ProjectCard(props) {
               <div>
                 {sourceCodeLink1 === "" ? (
                   <Button variant="link" className="disabled">
-                    <img src={github} />
+                    <img src={github} alt="" />
                   </Button>
                 ) : (
                   <Button variant="link" target="_blank" href={sourceCodeLink1}>
-                    <img src={github} />
+                    <img src={github} alt="" />
                   </Button>
                 )}
                 {galleryLink1 === "" ? (
                   <Button variant="link" className="disabled">
-                    <img src={image} />
+                    <img src={image} alt="" />
                   </Button>
                 ) : (
                   <Button variant="link" target="_blank" href={galleryLink1}>
-                    <img src={image} />
+                    <img src={image} alt="" />
                   </Button>
                 )}
               </div>
@@ -123,7 +123,7 @@ function ProjectCard(props) {
                 onClick={() => handleShowProject(projectProp1)}
                 className="text-green project-more"
               >
-                &nbsp;Learn More &gt;
+                Learn More &gt;
               </span>
             </div>
           </div>
