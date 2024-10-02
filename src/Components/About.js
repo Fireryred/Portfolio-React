@@ -1,8 +1,13 @@
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
+import github from "../Images/SVG/github.svg";
+import facebook from "../Images/SVG/facebook.svg";
+import twitter from "../Images/SVG/twitter.svg";
+import linkedin from "../Images/SVG/linkedin.svg";
+import arrow from "../Images/SVG/arrow.svg";
 
 const TECHSKILL = [
   { id: "tech-0", skill: "Java" },
@@ -80,7 +85,41 @@ function About(props) {
             be able to use my skills. If you have a position open that I might
             be able to demonstrate my skills, let's connect.
           </p>
-          <Button variant="success">Contact me</Button>
+          <div>
+            <span className="text-green about-footer">
+              <p>
+                My links <img className="about-link-arrow" alt="" src={arrow} />
+              </p>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/Fireryred"
+              >
+                <img className="about-link" alt="" src={github} />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/gershom-gruta"
+              >
+                <img className="about-link" alt="" src={linkedin} />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.facebook.com/Abbyssof"
+              >
+                <img className="about-link" alt="" src={facebook} />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://x.com/GershomGruta"
+              >
+                <img className="about-link" alt="" src={twitter} />
+              </a>
+            </span>
+          </div>
         </Col>
         <Col>
           <p className="about-skill-title">Tech Skills</p>
