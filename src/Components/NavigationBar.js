@@ -54,7 +54,12 @@ function NavigationBar(props) {
 
   return (
     <>
-      <Navbar expand="lg" bg="dark" data-bs-theme="dark" sticky="top">
+      <Navbar
+        expand="lg"
+        data-bs-theme="dark"
+        sticky="top"
+        className="nav-bgcolor"
+      >
         <Container>
           <Nav variant="underline" className="justify-content-left">
             {item}
@@ -66,7 +71,12 @@ function NavigationBar(props) {
           </Nav>
         </Container>
       </Navbar>
-      <Navbar expand="lg" fixed="bottom" bg="dark" data-bs-theme="dark">
+      <Navbar
+        expand="lg"
+        fixed="bottom"
+        data-bs-theme="dark"
+        className="nav-bgcolor"
+      >
         <Container className="justify-content-center">
           <Nav>
             <Nav.Link target="_blank" href="https://github.com/Fireryred">

@@ -15,7 +15,7 @@ section {
   --text-xl: 3.4rem;
   --text-2xl: 4.6rem;
   --text-3xl: 6.6rem;
-  --text-green: #15a347;
+  --text-green: #22b477;
   --filter-green: invert(43%) sepia(98%) saturate(423%) hue-rotate(89deg)
     brightness(95%) contrast(88%);
 }
@@ -25,7 +25,7 @@ section {
   margin-top: 40vh;
 }
 .main-body {
-  background-color: #282c34;
+  background-color: #20242b;
 }
 .text-green {
   color: var(--text-green) !important;

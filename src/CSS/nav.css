@@ -16,6 +16,9 @@
   font-weight: 700;
   border-bottom: 0.125rem solid white;
 }
+.nav-bgcolor {
+  background-color: rgb(22, 24, 29) !important;
+}
 .footer-svg {
   width: 1.5rem;
 }
