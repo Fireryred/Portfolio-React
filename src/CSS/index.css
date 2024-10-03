@@ -233,7 +233,7 @@ section {
   text-decoration: none !important;
 }
 .modal-link > img {
-  margin: auto;
+  margin-top: 0.1rem;
   width: var(--text-xs);
 }
 .modal-link {
