@@ -120,7 +120,11 @@ function Projects(props) {
           </div>
         </Col>
       </Row>
-      <ProjectCard projects={projects} length={projectLength} />
+      <ProjectCard
+        projects={projects}
+        length={projectLength}
+        mainRef={props.mainRef}
+      />
     </Container>
   );
 }

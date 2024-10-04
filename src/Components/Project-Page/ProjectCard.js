@@ -13,15 +13,15 @@ function ProjectCard(props) {
   const [project, setProject] = useState(Object);
   const [showProject, setShowProject] = useState(false);
 
-  const mainBodyDiv = document.getElementById("main-body");
-  console.log(mainBodyDiv.classList);
+  const mainBodyRef = props.mainRef;
 
   const handleCloseProject = () => {
+    mainBodyRef.current.classList.remove("modal-blur");
     setShowProject(false);
-    mainBodyDiv.classList.remove("modal-blur");
   };
+
   const handleShowProject = (project) => {
-    mainBodyDiv.classList.add("modal-blur");
+    mainBodyRef.current.classList.add("modal-blur");
     setProject(project);
     setShowProject(true);
   };

@@ -7,6 +7,9 @@ html {
 section {
   scroll-snap-align: start;
 } */
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #20242b !important;
 }
