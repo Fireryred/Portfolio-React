@@ -9,12 +9,12 @@
 }
 .nav-item > a:hover {
   opacity: 75%;
-  border-bottom: 0.125rem solid rgb(255 255 255 / 75%);
+  border-bottom: 0.125rem solid rgb(34, 180, 119, 0.75);
 }
 .nav-item > a.active {
   opacity: 100%;
   font-weight: 700;
-  border-bottom: 0.125rem solid white;
+  border-bottom: 0.125rem solid var(--text-green);
 }
 .nav-bgcolor {
   background-color: rgb(22, 24, 29) !important;

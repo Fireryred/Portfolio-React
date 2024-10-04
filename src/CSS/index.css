@@ -22,6 +22,7 @@ body {
   --text-2xl: 4.6rem;
   --text-3xl: 6.6rem;
   --text-green: #22b477;
+  --pill-black: rgba(22, 24, 29, 0.7);
   --filter-green: invert(43%) sepia(98%) saturate(423%) hue-rotate(89deg)
     brightness(95%) contrast(88%);
 }
@@ -96,6 +97,7 @@ body {
 .about-skill {
   font-size: var(--text-xs) !important;
   color: #ced4da !important;
+  background-color: var(--pill-black);
 }
 .about-content {
   text-align: justify;
@@ -106,7 +108,7 @@ body {
   border-radius: 0.4rem;
   padding: 0.7rem;
   margin-right: 0.3rem;
-  background-color: #212529;
+  background-color: var(--pill-black);
   font-weight: 700;
   float: left;
   font-size: var(--text-md);

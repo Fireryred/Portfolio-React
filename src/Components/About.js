@@ -31,12 +31,12 @@ const SOFTSKILL = [
 
 function About(props) {
   const techSkillList = TECHSKILL.map((skill) => (
-    <Badge pill bg="dark" className="my-1 me-1 about-skill" key={skill.id}>
+    <Badge pill bg="" className="my-1 me-1 about-skill" key={skill.id}>
       {skill.skill}
     </Badge>
   ));
   const softSkillList = SOFTSKILL.map((skill) => (
-    <Badge pill bg="dark" className="my-1 me-1 about-skill" key={skill.id}>
+    <Badge pill bg="" className="my-1 me-1 about-skill" key={skill.id}>
       {skill.skill}
     </Badge>
   ));
