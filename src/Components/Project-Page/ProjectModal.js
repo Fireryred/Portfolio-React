@@ -27,7 +27,6 @@ function ProjectModal(props) {
       </p>
     </>
   );
-  console.log(projectProp);
 
   const isObjectEmpty = (objectName) => {
     for (let prop in objectName) {
@@ -47,6 +46,7 @@ function ProjectModal(props) {
       data-bs-theme="dark"
       show={props.show}
       onHide={props.handleClose}
+      className="modal-pop"
       dialogClassName="modal-project"
       centered={true}
     >
