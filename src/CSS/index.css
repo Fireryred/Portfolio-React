@@ -210,20 +210,23 @@ body {
   max-width: 35% !important;
   margin-block: 3.5rem !important;
 }
-@keyframes pop {
+@keyframes modal-pop {
   0% {
     opacity: 0;
     top: 100px;
   }
   80% {
-    top: 5px;
+    top: -10px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
   }
 }
 .modal-pop {
-  animation-name: pop;
-  animation-duration: 0.25s;
+  animation-name: modal-pop;
+  animation-duration: 0.35s;
   animation-timing-function: ease-in-out;
-  transition: top 0.25s, opacity 0.25s !important;
 }
 .modal-header {
   overflow: hidden;

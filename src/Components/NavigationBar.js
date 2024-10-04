@@ -65,7 +65,12 @@ function NavigationBar(props) {
             {item}
           </Nav>
           <Nav className="justify-content-right">
-            <Button variant="outline-success" target="_blank" href={resume}>
+            <Button
+              className="resume-btn"
+              variant="outline-success"
+              target="_blank"
+              href={resume}
+            >
               My Resumé
             </Button>
           </Nav>

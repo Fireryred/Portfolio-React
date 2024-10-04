@@ -22,3 +22,6 @@
 .footer-svg {
   width: 1.5rem;
 }
+.resume-btn {
+  transition: all 0.25s !important;
+}
