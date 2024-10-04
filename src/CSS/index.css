@@ -144,6 +144,12 @@ section {
   margin-inline: auto;
   margin-top: 3.5rem;
   margin-bottom: -3.5rem;
+  transition-duration: 0.25s;
+}
+.project-card-img:hover {
+  width: 90% !important;
+  rotate: 2deg;
+  transition-duration: 0.25s;
 }
 .project-title {
   display: flex;
