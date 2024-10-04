@@ -7,6 +7,9 @@ html {
 section {
   scroll-snap-align: start;
 } */
+body {
+  background-color: #20242b !important;
+}
 :root {
   --text-xs: 1rem;
   --text-sm: 1.25rem;
@@ -194,6 +197,9 @@ section {
 .project-more:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+.modal-blur {
+  filter: blur(12px);
 }
 .modal-project {
   max-width: 35% !important;

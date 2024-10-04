@@ -14,7 +14,7 @@ function Index() {
   };
 
   return (
-    <div className="text-light main-body">
+    <div className="text-light main-body" id="main-body">
       <NavigationBar refs={observerRefs} />
       <Home handleRef={setReference} />
       <About handleRef={setReference} />
