@@ -8,6 +8,8 @@ import Button from "react-bootstrap/Button";
 import github from "../../Images/SVG/github.svg";
 import image from "../../Images/SVG/image.svg";
 import ProjectModal from "./ProjectModal";
+import Reveal from "../Animation/Reveal";
+import RevealCard from "../Animation/RevealCard";
 
 function ProjectCard(props) {
   const [project, setProject] = useState(Object);
@@ -54,60 +56,21 @@ function ProjectCard(props) {
       <Row xs={5} data-bs-theme="dark" className="project-row">
         <Col />
         <Col className="ps-5 pe-3 project-card">
-          <Card onClick={() => handleShowProject(projectProp)}>
-            <Card.Img className="project-card-img" src={projectProp.image} />
-          </Card>
-          <div className="project-container ">
-            <div className="project-title">
-              <div>{projectProp.name}</div>
-              <div className="line" />
-              <div>
-                {sourceCodeLink === "" ? (
-                  <Button variant="link" className="disabled">
-                    <img src={github} alt="" />
-                  </Button>
-                ) : (
-                  <Button variant="link" target="_blank" href={sourceCodeLink}>
-                    <img src={github} alt="" />
-                  </Button>
-                )}
-                {galleryLink === "" ? (
-                  <Button variant="link" className="disabled">
-                    <img src={image} alt="" />
-                  </Button>
-                ) : (
-                  <Button variant="link" target="_blank" href={galleryLink}>
-                    <img src={image} alt="" />
-                  </Button>
-                )}
-              </div>
-            </div>
-            <div className="text-green project-language">
-              {projectProp.language}
-            </div>
-            <div className="project-content">
-              {projectProp.description}
-              <span
-                onClick={() => handleShowProject(projectProp)}
-                className="text-green project-more"
-              >
-                Learn More &gt;
-              </span>
-            </div>
-          </div>
-        </Col>
-
-        {!isObjectEmpty(projectProp1) ? (
-          <Col className="ps-3 pe-5 project-card">
-            <Card onClick={() => handleShowProject(projectProp1)}>
-              <Card.Img className="project-card-img" src={projectProp1.image} />
+          <RevealCard>
+            <Card
+              className="project-card-container"
+              onClick={() => handleShowProject(projectProp)}
+            >
+              <Card.Img className="project-card-img" src={projectProp.image} />
             </Card>
-            <div className="project-container ">
+          </RevealCard>
+          <div className="project-container">
+            <Reveal hasLine={true}>
               <div className="project-title">
-                <div>{projectProp1.name}</div>
+                <div>{projectProp.name}</div>
                 <div className="line" />
                 <div>
-                  {sourceCodeLink1 === "" ? (
+                  {sourceCodeLink === "" ? (
                     <Button variant="link" className="disabled">
                       <img src={github} alt="" />
                     </Button>
@@ -115,34 +78,107 @@ function ProjectCard(props) {
                     <Button
                       variant="link"
                       target="_blank"
-                      href={sourceCodeLink1}
+                      href={sourceCodeLink}
                     >
                       <img src={github} alt="" />
                     </Button>
                   )}
-                  {galleryLink1 === "" ? (
+                  {galleryLink === "" ? (
                     <Button variant="link" className="disabled">
                       <img src={image} alt="" />
                     </Button>
                   ) : (
-                    <Button variant="link" target="_blank" href={galleryLink1}>
+                    <Button variant="link" target="_blank" href={galleryLink}>
                       <img src={image} alt="" />
                     </Button>
                   )}
                 </div>
               </div>
+            </Reveal>
+            <Reveal>
               <div className="text-green project-language">
-                {projectProp1.language}
+                {projectProp.language}
               </div>
+            </Reveal>
+            <Reveal>
               <div className="project-content">
-                {projectProp1.description}
+                {projectProp.description}
                 <span
-                  onClick={() => handleShowProject(projectProp1)}
+                  onClick={() => handleShowProject(projectProp)}
                   className="text-green project-more"
                 >
                   Learn More &gt;
                 </span>
               </div>
+            </Reveal>
+          </div>
+        </Col>
+
+        {!isObjectEmpty(projectProp1) ? (
+          <Col className="ps-3 pe-5 project-card">
+            <RevealCard>
+              <Card
+                className="project-card-container"
+                onClick={() => handleShowProject(projectProp1)}
+              >
+                <Card.Img
+                  className="project-card-img"
+                  src={projectProp1.image}
+                />
+              </Card>
+            </RevealCard>
+
+            <div className="project-container ">
+              <Reveal>
+                <div className="project-title">
+                  <div>{projectProp1.name}</div>
+                  <div className="line" />
+                  <div>
+                    {sourceCodeLink1 === "" ? (
+                      <Button variant="link" className="disabled">
+                        <img src={github} alt="" />
+                      </Button>
+                    ) : (
+                      <Button
+                        variant="link"
+                        target="_blank"
+                        href={sourceCodeLink1}
+                      >
+                        <img src={github} alt="" />
+                      </Button>
+                    )}
+                    {galleryLink1 === "" ? (
+                      <Button variant="link" className="disabled">
+                        <img src={image} alt="" />
+                      </Button>
+                    ) : (
+                      <Button
+                        variant="link"
+                        target="_blank"
+                        href={galleryLink1}
+                      >
+                        <img src={image} alt="" />
+                      </Button>
+                    )}
+                  </div>
+                </div>
+              </Reveal>
+              <Reveal>
+                <div className="text-green project-language">
+                  {projectProp1.language}
+                </div>
+              </Reveal>
+              <Reveal>
+                <div className="project-content">
+                  {projectProp1.description}
+                  <span
+                    onClick={() => handleShowProject(projectProp1)}
+                    className="text-green project-more"
+                  >
+                    Learn More &gt;
+                  </span>
+                </div>
+              </Reveal>
             </div>
           </Col>
         ) : (

@@ -26,8 +26,11 @@ body {
   --filter-green: invert(43%) sepia(98%) saturate(423%) hue-rotate(89deg)
     brightness(95%) contrast(88%);
 }
+#reveal > div {
+  position: initial;
+}
 .ref {
-  position: absolute;
+  position: absolute !important;
   width: 1px;
   margin-top: 40vh;
 }
@@ -139,9 +142,9 @@ body {
 .project-card {
   width: 29% !important;
 }
-.project-card > .card {
-  height: 17rem;
-  border-radius: 0.8rem;
+.project-card-container {
+  height: 17rem !important;
+  border-radius: 0.8rem !important;
   overflow: hidden;
   cursor: pointer;
 }

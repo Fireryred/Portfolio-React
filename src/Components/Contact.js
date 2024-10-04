@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import emailImage from "../Images/SVG/email.svg";
+import Reveal from "./Animation/Reveal";
 
 function Contact(props) {
   return (
@@ -17,41 +18,47 @@ function Contact(props) {
       <Row xs={5}>
         <Col />
         <Col xs={7} className="px-5 contact">
-          <p className="contact-title">
-            Contact<span className="text-green">.</span>
-          </p>
-          <p className="contact-content">
-            Email me if you want to connect! You can also find me at
-            <br />
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/gershom-gruta/"
-              className="text-green"
-            >
-              linkedin
-            </a>
-            &nbsp;or&nbsp;
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.jobstreet.com.ph/profile/gershom-gruta-YgYM0KhBRz"
-              className="text-green"
-            >
-              jobstreet.
-            </a>
-          </p>
-          <div className="contact-footer">
-            <a
-              className="contact-email"
-              target="_blank"
-              rel="noreferrer"
-              href="mailto:gershomgruta06@gmail.com"
-            >
-              <img alt="" src={emailImage} />
-              <span className="text-white">gershomgruta06@gmail.com</span>
-            </a>
-          </div>
+          <Reveal>
+            <p className="contact-title">
+              Contact<span className="text-green">.</span>
+            </p>
+          </Reveal>
+          <Reveal>
+            <p className="contact-content">
+              Email me if you want to connect! You can also find me at
+              <br />
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/gershom-gruta/"
+                className="text-green"
+              >
+                linkedin
+              </a>
+              &nbsp;or&nbsp;
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.jobstreet.com.ph/profile/gershom-gruta-YgYM0KhBRz"
+                className="text-green"
+              >
+                jobstreet.
+              </a>
+            </p>
+          </Reveal>
+          <Reveal>
+            <div className="contact-footer">
+              <a
+                className="contact-email"
+                target="_blank"
+                rel="noreferrer"
+                href="mailto:gershomgruta06@gmail.com"
+              >
+                <img alt="" src={emailImage} />
+                <span className="text-white">gershomgruta06@gmail.com</span>
+              </a>
+            </div>
+          </Reveal>
         </Col>
         <Col />
       </Row>

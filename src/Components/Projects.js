@@ -8,6 +8,7 @@ import RealifsImage from "../Images/Projects/Realifs.jpg";
 import SolobitImage from "../Images/Projects/SoloBit.png";
 import MyxaImage from "../Images/Projects/Myxa.png";
 import ShipwreckImage from "../Images/Projects/shipwreck.png";
+import Reveal from "./Animation/Reveal";
 
 const projects = {
   0: {
@@ -112,12 +113,14 @@ function Projects(props) {
       <Row xs={5}>
         <Col />
         <Col xs={7} className="px-5">
-          <div className="text-end heading-title">
-            <div className="line" />
-            <div>
-              Projects<span className="text-green">.</span>
+          <Reveal>
+            <div className="text-end heading-title">
+              <div className="line" />
+              <div>
+                Projects<span className="text-green">.</span>
+              </div>
             </div>
-          </div>
+          </Reveal>
         </Col>
       </Row>
       <ProjectCard

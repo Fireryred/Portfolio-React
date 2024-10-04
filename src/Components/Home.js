@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import Reveal from "./Animation/Reveal";
 
 function Home(props) {
   return (
@@ -17,25 +18,31 @@ function Home(props) {
       <Row xs={5}>
         <Col />
         <Col xs={6} className="ps-5">
-          <p className="home-title">
-            Hey, I'm Gershom<span className="text-green">.</span>
-          </p>
-          <p className="home-subtitle">
-            I'm a <span className="text-green">Software Engineer</span>
-          </p>
+          <Reveal>
+            <p className="home-title">
+              Hey, I'm Gershom<span className="text-green">.</span>
+            </p>
+            <p className="home-subtitle">
+              I'm a <span className="text-green">Software Engineer</span>
+            </p>
+          </Reveal>
         </Col>
       </Row>
       <Row xs={5}>
         <Col />
         <Col xs={4} className="ps-5">
-          <p className="home-content">
-            I build programs for fun and recently have been dipping my toes on
-            Godot 4. I still am working on my skills as a software developer.
-            Let's connect
-          </p>
-          <Button variant="success" href="#contact">
-            Contact me
-          </Button>
+          <Reveal>
+            <p className="home-content">
+              I build programs for fun and recently have been dipping my toes on
+              Godot 4. I still am working on my skills as a software developer.
+              Let's connect
+            </p>
+          </Reveal>
+          <Reveal>
+            <Button variant="success" href="#contact">
+              Contact me
+            </Button>
+          </Reveal>
         </Col>
       </Row>
     </Container>

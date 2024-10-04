@@ -12,6 +12,9 @@ import linkedin from "../Images/SVG/linkedin.svg";
 import resume from "../PDF/Gershom_Gruta_Resume.pdf";
 
 import "../CSS/nav.css";
+import Reveal from "./Animation/Reveal";
+import RevealNav from "./Animation/RevealNav";
+import RevealCard from "./Animation/RevealCard";
 
 function NavigationBar(props) {
   const items = ["Home", "About", "Project", "Contact"];
@@ -20,7 +23,7 @@ function NavigationBar(props) {
   const observers = useRef([]);
 
   const item = items.map((item, key) => (
-    <Nav.Item>
+    <Nav.Item as={"li"}>
       <a
         className={`${key === visibleKey ? "active" : ""}`}
         activeKey="./"
@@ -61,19 +64,23 @@ function NavigationBar(props) {
         className="nav-bgcolor"
       >
         <Container>
-          <Nav variant="underline" className="justify-content-left">
-            {item}
-          </Nav>
-          <Nav className="justify-content-right">
-            <Button
-              className="resume-btn"
-              variant="outline-success"
-              target="_blank"
-              href={resume}
-            >
-              My Resumé
-            </Button>
-          </Nav>
+          <RevealNav>
+            <Nav as={"ul"} variant="underline" className="justify-content-left">
+              {item}
+            </Nav>
+          </RevealNav>
+          <RevealNav>
+            <Nav className="justify-content-right">
+              <Button
+                className="resume-btn"
+                variant="outline-success"
+                target="_blank"
+                href={resume}
+              >
+                My Resumé
+              </Button>
+            </Nav>
+          </RevealNav>
         </Container>
       </Navbar>
       <Navbar
@@ -83,23 +90,28 @@ function NavigationBar(props) {
         className="nav-bgcolor"
       >
         <Container className="justify-content-center">
-          <Nav>
-            <Nav.Link target="_blank" href="https://github.com/Fireryred">
-              <img src={github} alt="" className="footer-svg" />
-            </Nav.Link>
-            <Nav.Link
-              target="_blank"
-              href="https://www.linkedin.com/in/gershom-gruta/"
-            >
-              <img src={linkedin} alt="" className="footer-svg" />
-            </Nav.Link>
-            <Nav.Link target="_blank" href="https://www.facebook.com/Abbyssof/">
-              <img src={facebook} alt="" className="footer-svg" />
-            </Nav.Link>
-            <Nav.Link target="_blank" href="https://x.com/GershomGruta">
-              <img src={twitter} alt="" className="footer-svg" />
-            </Nav.Link>
-          </Nav>
+          <RevealCard>
+            <Nav>
+              <Nav.Link target="_blank" href="https://github.com/Fireryred">
+                <img src={github} alt="" className="footer-svg" />
+              </Nav.Link>
+              <Nav.Link
+                target="_blank"
+                href="https://www.linkedin.com/in/gershom-gruta/"
+              >
+                <img src={linkedin} alt="" className="footer-svg" />
+              </Nav.Link>
+              <Nav.Link
+                target="_blank"
+                href="https://www.facebook.com/Abbyssof/"
+              >
+                <img src={facebook} alt="" className="footer-svg" />
+              </Nav.Link>
+              <Nav.Link target="_blank" href="https://x.com/GershomGruta">
+                <img src={twitter} alt="" className="footer-svg" />
+              </Nav.Link>
+            </Nav>
+          </RevealCard>
         </Container>
       </Navbar>
     </>
