@@ -12,7 +12,6 @@ import linkedin from "../Images/SVG/linkedin.svg";
 import resume from "../PDF/Gershom_Gruta_Resume.pdf";
 
 import "../CSS/nav.css";
-import Reveal from "./Animation/Reveal";
 import RevealNav from "./Animation/RevealNav";
 import RevealCard from "./Animation/RevealCard";
 
