@@ -55,7 +55,7 @@ function ProjectCard(props) {
     projects.push(
       <Row xs={5} data-bs-theme="dark" className="project-row">
         <Col />
-        <Col className="ps-5 pe-3 project-card">
+        <Col className="ps-5 pe-3 project-card" key={index}>
           <RevealCard>
             <Card
               className="project-card-container"
@@ -115,7 +115,7 @@ function ProjectCard(props) {
         </Col>
 
         {!isObjectEmpty(projectProp1) ? (
-          <Col className="ps-3 pe-5 project-card">
+          <Col className="ps-3 pe-5 project-card" key={index + 1}>
             <RevealCard>
               <Card
                 className="project-card-container"

@@ -12,7 +12,6 @@ import linkedin from "../Images/SVG/linkedin.svg";
 import resume from "../PDF/Gershom_Gruta_Resume.pdf";
 
 import "../CSS/nav.css";
-import Reveal from "./Animation/Reveal";
 import RevealNav from "./Animation/RevealNav";
 import RevealCard from "./Animation/RevealCard";
 
@@ -23,15 +22,16 @@ function NavigationBar(props) {
   const observers = useRef([]);
 
   const item = items.map((item, key) => (
-    <Nav.Item as={"li"}>
-      <a
-        className={`${key === visibleKey ? "active" : ""}`}
-        activeKey="./"
-        href={`#${item.toLowerCase()}`}
-      >
-        {item}
-      </a>
-    </Nav.Item>
+    <RevealNav delay={key} key={key}>
+      <Nav.Item as={"li"}>
+        <a
+          className={`${key === visibleKey ? "active" : ""}`}
+          href={`#${item.toLowerCase()}`}
+        >
+          {item}
+        </a>
+      </Nav.Item>
+    </RevealNav>
   ));
 
   const observerCallback = async (e, key) => {
@@ -61,14 +61,13 @@ function NavigationBar(props) {
         expand="lg"
         data-bs-theme="dark"
         sticky="top"
+        activeKey="./"
         className="nav-bgcolor"
       >
         <Container>
-          <RevealNav>
-            <Nav as={"ul"} variant="underline" className="justify-content-left">
-              {item}
-            </Nav>
-          </RevealNav>
+          <Nav as={"ul"} variant="underline" className="justify-content-left">
+            {item}
+          </Nav>
           <RevealNav>
             <Nav className="justify-content-right">
               <Button
