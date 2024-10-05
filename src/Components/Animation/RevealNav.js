@@ -9,7 +9,11 @@ function RevealNav(props) {
       }}
       initial="hidden"
       animate="visible"
-      transition={{ duration: 0.5, delay: 0.2, staggerChildren: 0.9 }}
+      transition={{
+        duration: 0.5,
+        delay: 0.2 * props.delay,
+        staggerChildren: 0.9,
+      }}
     >
       {props.children}
     </motion.div>

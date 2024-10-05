@@ -23,15 +23,17 @@ function NavigationBar(props) {
   const observers = useRef([]);
 
   const item = items.map((item, key) => (
-    <Nav.Item as={"li"}>
-      <a
-        className={`${key === visibleKey ? "active" : ""}`}
-        activeKey="./"
-        href={`#${item.toLowerCase()}`}
-      >
-        {item}
-      </a>
-    </Nav.Item>
+    <RevealNav delay={key}>
+      <Nav.Item as={"li"}>
+        <a
+          className={`${key === visibleKey ? "active" : ""}`}
+          activeKey="./"
+          href={`#${item.toLowerCase()}`}
+        >
+          {item}
+        </a>
+      </Nav.Item>
+    </RevealNav>
   ));
 
   const observerCallback = async (e, key) => {
@@ -64,11 +66,9 @@ function NavigationBar(props) {
         className="nav-bgcolor"
       >
         <Container>
-          <RevealNav>
-            <Nav as={"ul"} variant="underline" className="justify-content-left">
-              {item}
-            </Nav>
-          </RevealNav>
+          <Nav as={"ul"} variant="underline" className="justify-content-left">
+            {item}
+          </Nav>
           <RevealNav>
             <Nav className="justify-content-right">
               <Button
