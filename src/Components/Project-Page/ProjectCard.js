@@ -37,6 +37,64 @@ function ProjectCard(props) {
     return true;
   };
 
+  const handleButton = (link, type) => {
+    return link === "" ? (
+      <Button variant="link" className="disabled">
+        <img src={type} alt="" />
+      </Button>
+    ) : (
+      <Button variant="link" target="_blank" href={link}>
+        <img src={type} alt="" />
+      </Button>
+    );
+  };
+
+  const handleProjectChunk = (projectProp, sourceCodeLink, galleryLink) => {
+    return !isObjectEmpty(projectProp) ? (
+      <Col className="ps-3 pe-5 project-card">
+        <RevealCard>
+          <Card
+            className="project-card-container"
+            onClick={() => handleShowProject(projectProp)}
+          >
+            <Card.Img className="project-card-img" src={projectProp.image} />
+          </Card>
+        </RevealCard>
+
+        <div className="project-container ">
+          <Reveal>
+            <div className="project-title">
+              <div>{projectProp.name}</div>
+              <div className="line" />
+              <div>
+                {handleButton(sourceCodeLink, github)}
+                {handleButton(galleryLink, image)}
+              </div>
+            </div>
+          </Reveal>
+          <Reveal>
+            <div className="text-green project-language">
+              {projectProp.language}
+            </div>
+          </Reveal>
+          <Reveal>
+            <div className="project-content">
+              {projectProp.description}
+              <span
+                onClick={() => handleShowProject(projectProp)}
+                className="text-green project-more"
+              >
+                Learn More &gt;
+              </span>
+            </div>
+          </Reveal>
+        </div>
+      </Col>
+    ) : (
+      ""
+    );
+  };
+
   let projects = [];
 
   for (let index = 0; index <= props.length - 1; index += 2) {
@@ -55,135 +113,8 @@ function ProjectCard(props) {
     projects.push(
       <Row xs={5} data-bs-theme="dark" className="project-row">
         <Col />
-        <Col className="ps-5 pe-3 project-card">
-          <RevealCard>
-            <Card
-              className="project-card-container"
-              onClick={() => handleShowProject(projectProp)}
-            >
-              <Card.Img className="project-card-img" src={projectProp.image} />
-            </Card>
-          </RevealCard>
-          <div className="project-container">
-            <Reveal hasLine={true}>
-              <div className="project-title">
-                <div>{projectProp.name}</div>
-                <div className="line" />
-                <div>
-                  {sourceCodeLink === "" ? (
-                    <Button variant="link" className="disabled">
-                      <img src={github} alt="" />
-                    </Button>
-                  ) : (
-                    <Button
-                      variant="link"
-                      target="_blank"
-                      href={sourceCodeLink}
-                    >
-                      <img src={github} alt="" />
-                    </Button>
-                  )}
-                  {galleryLink === "" ? (
-                    <Button variant="link" className="disabled">
-                      <img src={image} alt="" />
-                    </Button>
-                  ) : (
-                    <Button variant="link" target="_blank" href={galleryLink}>
-                      <img src={image} alt="" />
-                    </Button>
-                  )}
-                </div>
-              </div>
-            </Reveal>
-            <Reveal>
-              <div className="text-green project-language">
-                {projectProp.language}
-              </div>
-            </Reveal>
-            <Reveal>
-              <div className="project-content">
-                {projectProp.description}
-                <span
-                  onClick={() => handleShowProject(projectProp)}
-                  className="text-green project-more"
-                >
-                  Learn More &gt;
-                </span>
-              </div>
-            </Reveal>
-          </div>
-        </Col>
-
-        {!isObjectEmpty(projectProp1) ? (
-          <Col className="ps-3 pe-5 project-card">
-            <RevealCard>
-              <Card
-                className="project-card-container"
-                onClick={() => handleShowProject(projectProp1)}
-              >
-                <Card.Img
-                  className="project-card-img"
-                  src={projectProp1.image}
-                />
-              </Card>
-            </RevealCard>
-
-            <div className="project-container ">
-              <Reveal>
-                <div className="project-title">
-                  <div>{projectProp1.name}</div>
-                  <div className="line" />
-                  <div>
-                    {sourceCodeLink1 === "" ? (
-                      <Button variant="link" className="disabled">
-                        <img src={github} alt="" />
-                      </Button>
-                    ) : (
-                      <Button
-                        variant="link"
-                        target="_blank"
-                        href={sourceCodeLink1}
-                      >
-                        <img src={github} alt="" />
-                      </Button>
-                    )}
-                    {galleryLink1 === "" ? (
-                      <Button variant="link" className="disabled">
-                        <img src={image} alt="" />
-                      </Button>
-                    ) : (
-                      <Button
-                        variant="link"
-                        target="_blank"
-                        href={galleryLink1}
-                      >
-                        <img src={image} alt="" />
-                      </Button>
-                    )}
-                  </div>
-                </div>
-              </Reveal>
-              <Reveal>
-                <div className="text-green project-language">
-                  {projectProp1.language}
-                </div>
-              </Reveal>
-              <Reveal>
-                <div className="project-content">
-                  {projectProp1.description}
-                  <span
-                    onClick={() => handleShowProject(projectProp1)}
-                    className="text-green project-more"
-                  >
-                    Learn More &gt;
-                  </span>
-                </div>
-              </Reveal>
-            </div>
-          </Col>
-        ) : (
-          ""
-        )}
+        {handleProjectChunk(projectProp, sourceCodeLink, galleryLink)}
+        {handleProjectChunk(projectProp1, sourceCodeLink1, galleryLink1)}
       </Row>
     );
   }
