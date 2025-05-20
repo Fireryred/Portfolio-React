@@ -11,7 +11,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: #20242b !important;
+  background-color: #20242b;
 }
 :root {
   --text-xs: 1rem;
@@ -30,7 +30,7 @@ body {
   position: initial;
 }
 .ref {
-  position: absolute !important;
+  position: absolute;
   width: 1px;
   margin-top: 40vh;
 }
@@ -38,7 +38,7 @@ body {
   background-color: #20242b;
 }
 .text-green {
-  color: var(--text-green) !important;
+  color: var(--text-green);
 }
 .main-body > div:last-child {
   padding-bottom: 10rem;
@@ -48,7 +48,6 @@ body {
 }
 .home-container {
   padding-top: 8rem;
-  padding-left: 5.9rem !important;
   min-height: 40rem;
 }
 .home-title {
@@ -76,7 +75,6 @@ body {
 
 .sub-container {
   padding-top: 7rem;
-  padding-left: 5.9rem !important;
   min-height: 45rem;
 }
 .heading-title {
@@ -98,8 +96,8 @@ body {
   font-weight: 700;
 }
 .about-skill {
-  font-size: var(--text-xs) !important;
-  color: #ced4da !important;
+  font-size: var(--text-xs);
+  color: #ced4da;
   background-color: var(--pill-black);
 }
 .about-content {
@@ -137,28 +135,25 @@ body {
   cursor: pointer;
 }
 .project-row {
-  margin-top: 1rem !important;
+  margin-top: 1rem;
 }
 .project-card {
-  width: 29% !important;
+  width: 25%;
 }
 .project-card-container {
-  height: 17rem !important;
-  border-radius: 0.8rem !important;
   overflow: hidden;
   cursor: pointer;
 }
 .project-card-img {
-  width: 85% !important;
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
+  width: 85%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   margin-inline: auto;
-  margin-top: 3.5rem;
-  margin-bottom: -3.5rem;
+  margin-top: 3rem;
   transition-duration: 0.25s;
 }
 .project-card-img:hover {
-  width: 90% !important;
+  width: 90%;
   rotate: 2deg;
   transition-duration: 0.25s;
 }
@@ -180,7 +175,7 @@ body {
 .project-title > div > .btn > img {
   margin: auto;
   width: var(--text-md);
-  vertical-align: baseline !important;
+  vertical-align: baseline;
 }
 .project-title > div:first-child {
   font-weight: 700;
@@ -210,8 +205,8 @@ body {
   filter: blur(12px);
 }
 .modal-project {
-  max-width: 35% !important;
-  margin-block: 3.5rem !important;
+  max-width: 35%;
+  margin-block: 3.5rem;
 }
 @keyframes modal-pop {
   0% {
@@ -235,7 +230,7 @@ body {
   overflow: hidden;
 }
 .modal-body {
-  padding: 1.2rem !important;
+  padding: 1.2rem;
   gap: 1.2rem;
 }
 .modal-project-title {
@@ -266,25 +261,25 @@ body {
   gap: 1.2rem;
 }
 .modal-link {
-  display: flex !important;
+  display: flex;
   gap: 0.4rem;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 .modal-link > img {
   margin-top: 0.1rem;
   width: var(--text-xs);
 }
 .modal-link {
-  padding: 0% !important;
+  padding: 0%;
 }
 .modal-link.disabled {
   text-decoration: line-through;
 }
 .modal-link-space {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 .modal-link:hover {
-  text-decoration: underline !important;
+  text-decoration: underline;
 }
 .contact {
   align-items: center;
@@ -301,11 +296,11 @@ body {
 }
 .contact-content > .text-green {
   font-weight: 400;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 .contact-content > .text-green:hover {
   cursor: pointer;
-  text-decoration: underline !important;
+  text-decoration: underline;
 }
 .contact-footer {
   display: flex;
@@ -317,7 +312,7 @@ body {
   font-size: var(--text-md);
   gap: 0.3rem;
   width: fit-content;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 .contact-email:hover {
   color: var(--text-green);
@@ -327,4 +322,39 @@ body {
 .contact-email > img {
   margin-top: 0.5rem;
   width: 2rem;
+}
+@media (min-width: 900px) {
+  .project-card-container {
+    height: 8rem;
+    border-radius: 0.4rem;
+  }
+  .project-card-img {
+    margin-top: 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .project-card-container {
+    height: 10rem;
+    border-radius: 0.6rem;
+  }
+  .project-card-img {
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 1400px) {
+  .project-card-container {
+    height: 12rem;
+    border-radius: 0.8rem;
+  }
+  .project-card-img {
+    margin-top: 2.5rem;
+  }
+}
+@media (min-width: 1900px) {
+  .project-card-container {
+    height: 17rem;
+  }
+  .project-card-img {
+    margin-top: 3.5rem;
+  }
 }

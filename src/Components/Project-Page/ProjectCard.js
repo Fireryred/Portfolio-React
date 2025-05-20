@@ -49,9 +49,18 @@ function ProjectCard(props) {
     );
   };
 
-  const handleProjectChunk = (projectProp, sourceCodeLink, galleryLink) => {
+  const handleProjectChunk = (
+    projectProp,
+    sourceCodeLink,
+    galleryLink,
+    isSecond
+  ) => {
     return !isObjectEmpty(projectProp) ? (
-      <Col className="ps-3 pe-5 project-card">
+      <Col
+        md={{ offset: 3 }}
+        lg={{ offset: isSecond == false ? 3 : 0 }}
+        className="ps-3 pe-5 project-card"
+      >
         <RevealCard>
           <Card
             className="project-card-container"
@@ -111,10 +120,9 @@ function ProjectCard(props) {
     }
 
     projects.push(
-      <Row xs={5} data-bs-theme="dark" className="project-row">
-        <Col />
-        {handleProjectChunk(projectProp, sourceCodeLink, galleryLink)}
-        {handleProjectChunk(projectProp1, sourceCodeLink1, galleryLink1)}
+      <Row md={7} lg={6} data-bs-theme="dark" className="project-row">
+        {handleProjectChunk(projectProp, sourceCodeLink, galleryLink, false)}
+        {handleProjectChunk(projectProp1, sourceCodeLink1, galleryLink1, true)}
       </Row>
     );
   }

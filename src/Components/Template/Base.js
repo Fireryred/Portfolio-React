@@ -13,8 +13,8 @@ function Base(props) {
             }}
           />
         </div>
-        <Row xs={5}>
-          <Col></Col>
+        <Row lg={6}>
+          <Col lg={{ offset: 3 }}></Col>
         </Row>
       </Container>
     </section>

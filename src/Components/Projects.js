@@ -110,9 +110,8 @@ function Projects(props) {
           }}
         />
       </div>
-      <Row xs={5}>
-        <Col />
-        <Col xs={7} className="px-5">
+      <Row lg={6}>
+        <Col lg={{ span: 6, offset: 3 }}>
           <Reveal>
             <div className="text-end heading-title">
               <div className="line" />

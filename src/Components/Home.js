@@ -15,9 +15,8 @@ function Home(props) {
           }}
         />
       </div>
-      <Row xs={5}>
-        <Col />
-        <Col xs={6} className="ps-5">
+      <Row lg={6}>
+        <Col lg={{ span: 6, offset: 3 }}>
           <Reveal>
             <p className="home-title">
               Hey, I'm Gershom<span className="text-green">.</span>
@@ -28,9 +27,8 @@ function Home(props) {
           </Reveal>
         </Col>
       </Row>
-      <Row xs={5}>
-        <Col />
-        <Col xs={4} className="ps-5">
+      <Row lg={6}>
+        <Col lg={{ span: 4, offset: 3 }}>
           <Reveal>
             <p className="home-content">
               I build programs for fun and recently have been dipping my toes on

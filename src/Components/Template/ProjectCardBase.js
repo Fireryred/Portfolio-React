@@ -7,9 +7,8 @@ function ProjectCardBase() {
   return (
     <>
       <ProjectModal show={showProject} handleClose={handleCloseProject} />
-      <Row xs={5} data-bs-theme="dark">
-        <Col />
-        <Col className="ps-5 project-card">
+      <Row lg={6} data-bs-theme="dark">
+        <Col lg={{ offset: 3 }} className="ps-5 project-card">
           <Card className="project-btn" onClick={handleShowProject}>
             <Card.Img className="project-card-img" src={BBImg} />
           </Card>

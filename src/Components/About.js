@@ -51,9 +51,8 @@ function About(props) {
           }}
         />
       </div>
-      <Row xs={5}>
-        <Col />
-        <Col xs={7} className="px-5">
+      <Row lg={6}>
+        <Col lg={{ span: 6, offset: 3 }}>
           <Reveal>
             <div className="heading-title mb-3">
               <div>
@@ -64,9 +63,8 @@ function About(props) {
           </Reveal>
         </Col>
       </Row>
-      <Row xs={5}>
-        <Col />
-        <Col xs={5} className="ps-5 about-content">
+      <Row xs={6}>
+        <Col lg={{ span: 4, offset: 3 }} className="about-content">
           <Reveal>
             <p>
               Hello! I'm Gershom, I'm a graduate as a Software Engineer at

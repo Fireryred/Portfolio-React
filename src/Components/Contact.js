@@ -15,9 +15,8 @@ function Contact(props) {
           }}
         />
       </div>
-      <Row xs={5}>
-        <Col />
-        <Col xs={7} className="px-5 contact">
+      <Row lg={6}>
+        <Col lg={{ span: 6, offset: 3 }} className="contact">
           <Reveal>
             <p className="contact-title">
               Contact<span className="text-green">.</span>
@@ -60,7 +59,6 @@ function Contact(props) {
             </div>
           </Reveal>
         </Col>
-        <Col />
       </Row>
     </Container>
   );
