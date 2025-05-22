@@ -63,7 +63,7 @@ function About(props) {
           </Reveal>
         </Col>
       </Row>
-      <Row xs={6}>
+      <Row lg={6}>
         <Col lg={{ span: 4, offset: 3 }} className="about-content">
           <Reveal>
             <p>
