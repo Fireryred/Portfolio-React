@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import Container from "react-bootstrap/Container";
+import Offcanvas from "react-bootstrap/Offcanvas";
 import Button from "react-bootstrap/Button";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -59,17 +60,31 @@ function NavigationBar(props) {
   return (
     <>
       <Navbar
-        expand="lg"
+        key={"lg"}
+        expand={"lg"}
         data-bs-theme="dark"
         sticky="top"
         className="nav-bgcolor"
       >
         <Container>
-          <Nav as={"ul"} variant="underline" className="justify-content-left">
-            {item}
-          </Nav>
+          <Navbar.Offcanvas id="offcanvas-nav">
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title id="offcanvas-nav">
+                Gershom Gruta
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <Nav
+                as={"ul"}
+                variant="underline"
+                className="justify-content-left"
+              >
+                {item}
+              </Nav>
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
           <RevealNav>
-            <Nav className="justify-content-right">
+            <Nav placement="end">
               <Button
                 className="resume-btn"
                 variant="outline-success"
