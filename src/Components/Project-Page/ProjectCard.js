@@ -58,7 +58,7 @@ function ProjectCard(props) {
     return !isObjectEmpty(projectProp) ? (
       <Col
         md={{ offset: 3 }}
-        lg={{ offset: isSecond == false ? 3 : 0 }}
+        lg={{ offset: !isSecond ? 3 : 0 }}
         className="ps-3 pe-5 project-card"
       >
         <RevealCard>
