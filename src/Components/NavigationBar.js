@@ -60,14 +60,15 @@ function NavigationBar(props) {
   return (
     <>
       <Navbar
-        key={"lg"}
-        expand={"lg"}
+        key={"md"}
+        expand={"md"}
         data-bs-theme="dark"
         sticky="top"
         className="nav-bgcolor"
       >
         <Container>
-          <Navbar.Offcanvas id="offcanvas-nav">
+          <Navbar.Toggle />
+          <Navbar.Offcanvas id="offcanvas-nav" data-bs-theme="dark">
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvas-nav">
                 Gershom Gruta
@@ -105,23 +106,33 @@ function NavigationBar(props) {
       >
         <Container className="justify-content-center">
           <RevealCard>
-            <Nav>
-              <Nav.Link target="_blank" href="https://github.com/Fireryred">
+            <Nav className="footer-nav">
+              <Nav.Link
+                target="_blank"
+                href="https://github.com/Fireryred"
+                className="footer-link"
+              >
                 <img src={github} alt="" className="footer-svg" />
               </Nav.Link>
               <Nav.Link
                 target="_blank"
                 href="https://www.linkedin.com/in/gershom-gruta/"
+                className="footer-link"
               >
                 <img src={linkedin} alt="" className="footer-svg" />
               </Nav.Link>
               <Nav.Link
                 target="_blank"
                 href="https://www.facebook.com/Abbyssof/"
+                className="footer-link"
               >
                 <img src={facebook} alt="" className="footer-svg" />
               </Nav.Link>
-              <Nav.Link target="_blank" href="https://x.com/GershomGruta">
+              <Nav.Link
+                target="_blank"
+                href="https://x.com/GershomGruta"
+                className="footer-link"
+              >
                 <img src={twitter} alt="" className="footer-svg" />
               </Nav.Link>
             </Nav>
