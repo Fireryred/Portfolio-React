@@ -52,7 +52,7 @@ function About(props) {
         />
       </div>
       <Row lg={6}>
-        <Col lg={{ span: 6, offset: 3 }}>
+        <Col lg={{ span: 6, offset: 3 }} xs={{ span: 10, offset: 1 }}>
           <Reveal>
             <div className="heading-title mb-3">
               <div>
@@ -64,7 +64,12 @@ function About(props) {
         </Col>
       </Row>
       <Row lg={6}>
-        <Col lg={{ span: 4, offset: 3 }} className="about-content">
+        <Col
+          lg={{ span: 4, offset: 3 }}
+          md={{ span: 6, offset: 1 }}
+          xs={{ span: 10, offset: 1 }}
+          className="about-content"
+        >
           <Reveal>
             <p>
               Hello! I'm Gershom, I'm a graduate as a Software Engineer at
@@ -133,7 +138,7 @@ function About(props) {
             </div>
           </Reveal>
         </Col>
-        <Col>
+        <Col lg={{ span: 2, offset: 0 }} xs={{ span: 10, offset: 1 }}>
           <Reveal>
             <p className="about-skill-title">Tech Skills</p>
           </Reveal>

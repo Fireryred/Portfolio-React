@@ -16,7 +16,7 @@ function Home(props) {
         />
       </div>
       <Row lg={6}>
-        <Col lg={{ span: 6, offset: 3 }}>
+        <Col lg={{ span: 6, offset: 3 }} xs={{ span: 10, offset: 1 }}>
           <Reveal>
             <p className="home-title">
               Hey, I'm Gershom<span className="text-green">.</span>
@@ -28,7 +28,7 @@ function Home(props) {
         </Col>
       </Row>
       <Row lg={6}>
-        <Col lg={{ span: 4, offset: 3 }}>
+        <Col lg={{ span: 4, offset: 3 }} xs={{ span: 10, offset: 1 }}>
           <Reveal>
             <p className="home-content">
               I build programs for fun and recently have been dipping my toes on

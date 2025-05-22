@@ -111,7 +111,7 @@ function Projects(props) {
         />
       </div>
       <Row lg={6}>
-        <Col lg={{ span: 6, offset: 3 }}>
+        <Col lg={{ span: 6, offset: 3 }} xs={{ span: 10, offset: 1 }}>
           <Reveal>
             <div className="text-end heading-title">
               <div className="line" />

@@ -57,9 +57,9 @@ function ProjectCard(props) {
   ) => {
     return !isObjectEmpty(projectProp) ? (
       <Col
-        md={{ offset: 3 }}
-        lg={{ offset: !isSecond ? 3 : 0 }}
-        className="ps-3 pe-5 project-card"
+        lg={{ span: 3, offset: !isSecond ? 3 : 0 }}
+        xs={{ offset: 2 }}
+        className="ps-3 project-card"
       >
         <RevealCard>
           <Card
@@ -120,7 +120,7 @@ function ProjectCard(props) {
     }
 
     projects.push(
-      <Row md={7} lg={6} data-bs-theme="dark" className="project-row">
+      <Row lg={6} data-bs-theme="dark" className="project-row">
         {handleProjectChunk(projectProp, sourceCodeLink, galleryLink, false)}
         {handleProjectChunk(projectProp1, sourceCodeLink1, galleryLink1, true)}
       </Row>
