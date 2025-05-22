@@ -68,7 +68,11 @@ function NavigationBar(props) {
       >
         <Container>
           <Navbar.Toggle />
-          <Navbar.Offcanvas id="offcanvas-nav" data-bs-theme="dark">
+          <Navbar.Offcanvas
+            id="offcanvas-nav"
+            data-bs-theme="dark"
+            className="offcanvas-nav"
+          >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvas-nav">
                 Gershom Gruta

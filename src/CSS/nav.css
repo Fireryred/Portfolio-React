@@ -19,6 +19,9 @@
 .nav-bgcolor {
   background-color: rgb(22, 24, 29);
 }
+.offcanvas-nav {
+  width: 15rem !important;
+}
 .footer-nav {
   flex-direction: row;
 }
